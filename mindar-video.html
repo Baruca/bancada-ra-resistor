@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Vídeo do Resistor em Realidade Aumentada</title>
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .mensagem-instrucao,
+    .controles-video {
+      position: fixed;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #1f2933;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    .mensagem-instrucao {
+      top: 0;
+    }
+
+    .controles-video {
+      bottom: 0;
+    }
+
+    .botao {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1f5f8b;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .botao[hidden] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="mensagem-instrucao">
+    Aponte a câmera para a imagem da Estação do Resistor.
+  </p>
+
+  <div class="controles-video">
+    <p id="status-video">Procurando a imagem do resistor...</p>
+
+    <button
+      id="botao-reproduzir-ra"
+      class="botao"
+      type="button"
+      hidden
+    >
+      Reproduzir vídeo
+    </button>
+  </div>
+
+  <a-scene
+    mindar-image="imageTargetSrc: ar/resistor.mind;"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+    color-space="sRGB"
+    renderer="colorManagement: true"
+  >
+    <a-assets>
+      <video
+        id="video-resistor-ra"
+        src="videos/resistor.mp4"
+        preload="auto"
+        playsinline
+        webkit-playsinline
+        crossorigin="anonymous"
+      ></video>
+    </a-assets>
+
+    <a-camera
+      position="0 0 0"
+      look-controls="enabled: false"
+    ></a-camera>
+
+    <a-entity
+      id="alvo-resistor-video"
+      mindar-image-target="targetIndex: 0"
+    >
+      <a-video
+        id="painel-video-ra"
+        src="#video-resistor-ra"
+        width="0.92"
+        height="0.5175"
+        position="0 0 0.02"
+      ></a-video>
+    </a-entity>
+  </a-scene>
+
+  <script src="scripts/mindar-video.js"></script>
+</body>
+
+</html>
