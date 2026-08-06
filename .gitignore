@@ -1,0 +1,10 @@
+# Documentos internos do desenvolvimento
+AGENTS.md
+ROTEIRO_MODULO_RESISTOR.md
+PLANO_IMPLEMENTACAO_RESISTOR.md
+LEIA-ME.txt
+
+# Arquivos temporários do sistema e do editor
+Thumbs.db
+.DS_Store
+.vscode/

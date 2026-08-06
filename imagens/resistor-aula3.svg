@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+  <rect width="1000" height="560" rx="32" fill="#f4f1e8"/>
+  <text x="500" y="90" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="50" font-weight="700" fill="#222">Módulo do Resistor</text>
+  <line x1="110" y1="300" x2="330" y2="300" stroke="#333" stroke-width="20"/>
+  <line x1="670" y1="300" x2="890" y2="300" stroke="#333" stroke-width="20"/>
+  <rect x="300" y="210" width="400" height="180" rx="90" fill="#d7b77a"
+        stroke="#5d4a2f" stroke-width="12"/>
+  <rect x="370" y="215" width="28" height="170" fill="#7a3f17"/>
+  <rect x="455" y="215" width="28" height="170" fill="#111"/>
+  <rect x="540" y="215" width="28" height="170" fill="#c62828"/>
+  <rect x="625" y="215" width="28" height="170" fill="#d4af37"/>
+  <text x="500" y="475" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="30" fill="#333">Imagem de exemplo para a Aula 2</text>
+</svg>

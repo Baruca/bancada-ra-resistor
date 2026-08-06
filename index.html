@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Laboratório Interativo de Física</title>
+
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+  <main class="conteudo-principal">
+
+    <h1>Laboratório Interativo de Física</h1>
+
+    <p class="introducao">
+      Projeto educacional de Física e Eletrônica com conteúdos interativos.
+    </p>
+
+    <section class="modulo">
+      <h2>Primeiro módulo: resistor</h2>
+
+      <img
+        id="imagem-resistor"
+        src="imagens/resistor-aula3.svg"
+        alt="Ilustração de um resistor"
+      >
+
+      <p>
+        O resistor limita a corrente elétrica e pode ser usado para proteger
+        componentes como LEDs.
+      </p>
+
+      <a
+        class="botao"
+        href="#video-resistor"
+      >
+        Assistir ao vídeo
+      </a>
+    </section>
+
+    <section class="modulo">
+      <h2>Vídeo introdutório</h2>
+
+      <video
+        id="video-resistor"
+        controls
+        preload="metadata"
+      >
+        <source
+          src="videos/resistor.mp4"
+          type="video/mp4"
+        >
+
+        Seu navegador não conseguiu reproduzir o vídeo.
+      </video>
+
+      <button
+        id="botao-video"
+        class="botao"
+        type="button"
+      >
+        Reproduzir vídeo
+      </button>
+    </section>
+
+  </main>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
