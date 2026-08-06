@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Teste de câmera</title>
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+  <main class="conteudo-principal">
+    <section class="modulo">
+      <h1>Teste de câmera</h1>
+
+      <p>
+        Use os botões abaixo para testar o acesso à câmera do seu dispositivo.
+      </p>
+
+      <video
+        id="camera-video"
+        autoplay
+        muted
+        playsinline
+      ></video>
+
+      <button
+        id="botao-iniciar-camera"
+        class="botao"
+        type="button"
+      >
+        Iniciar câmera
+      </button>
+
+      <button
+        id="botao-parar-camera"
+        class="botao"
+        type="button"
+        disabled
+      >
+        Parar câmera
+      </button>
+
+      <p id="status-camera">A câmera ainda não foi iniciada.</p>
+    </section>
+  </main>
+
+  <script src="scripts/camera.js"></script>
+</body>
+
+</html>
